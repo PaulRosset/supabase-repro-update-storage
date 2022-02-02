@@ -5,11 +5,11 @@ This repository is meant to be used with nextjs, typescript and supabase.
 Reproduction:
 
 1. Download the [0.17.0](https://github.com/supabase/cli/releases/tag/v0.17.0) CLI from supabase
-2. Launch the docker container with:
+2. Launch the docker containers with:
    - `supabase init`
    - `supabase start`
 3. Run the transaction against the database in order to deactivate the security on Bucket and Object tables
-   - You will find the script at the root of this repo (`transation.sql`)
+   - You will find the script at the root of this repo (`transaction.sql`)
 4. Then, run the project, with:
    - `yarn dev`
 5. Go to `http://localhost:3000`
@@ -17,6 +17,8 @@ Reproduction:
 7. Result:
    - Open the dev tools under the network tab
    - You should see an error on the request: `http://localhost:54321/storage/v1/object/test/avatar` that gives a 400 bad request.
+
+Everyrhing happen at the file: `pages/index.tsx`
 
 The response:
 
